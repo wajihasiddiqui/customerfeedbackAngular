@@ -14,5 +14,5 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Customer_Feedback_System';
+  //title = 'Customer_Feedback_System';
 }

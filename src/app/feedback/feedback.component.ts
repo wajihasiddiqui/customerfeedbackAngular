@@ -29,7 +29,7 @@ export class FeedbackComponent {
         email: '',
         message: ''
       };
-      alert('Thank you for your feedback!'); 
+      alert('Thank you for your feedback!');  
     },
     error => {
       console.error('Error submitting feedback:', error);

@@ -1,16 +1,32 @@
-<div class="feedback-form">
-    <h2>Customer Feedback</h2>
-    <form (ngSubmit)="submitFeedback()">
-      <label>Name:</label>
-      <input type="text" [(ngModel)]="feedback.name" name="name" required />
-  
-      <label>Email:</label>
-      <input type="email" [(ngModel)]="feedback.email" name="email" required />
-  
-      <label>Message:</label>
-      <textarea [(ngModel)]="feedback.message" name="message" required></textarea>
-  
-      <button type="submit">Submit Feedback</button>
-    </form>
-  </div>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-lg">
+                <div class="card-body p-4">
+                    <h2 class="text-center mb-4">Share Your Feedback</h2>
+                    <form (ngSubmit)="submitFeedback()">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" [(ngModel)]="feedback.name" name="name" class="form-control" id="name" required aria-describedby="nameError">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" [(ngModel)]="feedback.email" name="email"  class="form-control" id="email" required aria-describedby="emailError" list="emailSuggestions">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Feedback Message</label>
+                            <textarea class="form-control" [(ngModel)]="feedback.message" name="message" id="message" rows="4" required aria-describedby="messageError"></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button class="btn btn-primary btn-lg submit-btn" type="submit">
+                                <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                <span class="btn-text">Submit Feedback</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
   
